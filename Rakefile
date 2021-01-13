@@ -21,8 +21,8 @@ namespace "ffi-compiler" do
     c.have_library?('jpeg')
     c.have_library?('tiff')
     if c.platform.mac?
-      c.cflags << "-arch x86_64"
-      c.ldflags << "-arch x86_64"
+      c.cflags << "-arch arm64"
+      c.ldflags << "-arch arm64"
     end
     c.ldflags << ENV['LD_FLAGS'] if ENV['LD_FLAGS']
     c.cflags << ENV['C_FLAGS'] if ENV['C_FLAGS']
